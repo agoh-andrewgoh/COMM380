@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" >
+<title>Unified Webpage</title>
+<style>
+	body { 
+		font-family: Arial, sans-serif;
+		background-color: #1D1D1D;
+		overflow: auto;
+		margin-top: 50px;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		width: 640px;
+		margin: 0 auto;
+	}
+	.gridimages img {
+		max-width: 200px;
+		max-height: 200px;
+		filter: brightness(30%);
+	}
+	.gridimages img:hover {
+		animation: rainbowFlash 0.5s infinite alternate;
+	}
+	@keyframes rainbowFlash {
+		0% { filter: hue-rotate(0deg); }
+		100% { filter: hue-rotate(360deg); }
+	} 
+	h1 {
+		color: white;
+		text-align: center;
+		font-weight: 1;
+		font-size: 50px;
+		width: 640x;
+		magin: 0 auto;
+	}
+	a {
+		text-decoration: none;
+	}
+</style>	
+</head>
+<body>
+<div>
+	<div class="grid-container">
+		<div class="gridimages">
+			<a href="LetterA.html"><img src="images/A500.jpg" alt="A"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterB.html"><img src="images/B500.jpg" alt="B"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterF.html"><img src="images/F500.jpg" alt="F"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterG.html"><img src="images/G500.jpg" alt="G"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterJ.html"><img src="images/J500.jpg" alt="J"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterM.html"><img src="images/M500.jpg" alt="M"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterQ.html"><img src="images/Q500.jpg" alt="Q"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterW.html"><img src="images/W500.jpg" alt="W"></a>
+		</div>
+		<div class="gridimages">
+			<a href="LetterZ.html"><img src="images/Z500.jpg" alt="Z"></a>
+		</div>
+	</div>
+	<div class="text">
+		<a href="../../index.html"><h1>Return Home</h1></a>
+	</div>	
+</div>
+</body>
+</html>

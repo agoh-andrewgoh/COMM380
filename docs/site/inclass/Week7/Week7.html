@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 7: In-Class</title>
+<style>
+	body {
+		margin: 25px 0 0 35px;
+	}
+	#wrapper {
+		width: 965px;
+		height: 575px;
+	}
+	#images {
+		width: 880px;
+		height: 575px;
+		float: left
+	}
+	#banner {
+		width: 880px;
+		height: 110px;
+	}
+	#world {
+		width: 880px;
+		height: 465px;
+		background-color: #27AAE1;
+	}
+	#web {
+		width: 340px;
+		height: 110px;
+		float: left;
+		background-color: #F7941E;
+	}
+	www {
+		width: 85px;
+		height: 575px;
+		float: right;
+		background-color: #8DC63F;
+	}
+	.boxart {
+		width: 135px;
+		height: 110px;
+		float: left;
+		background-color: #DA523A;
+	}
+</style>
+<script>
+function changeImage(targetImage, newSrc) {
+    var targetImg = document.getElementById(targetImage);
+    targetImg.src = newSrc;
+}
+
+function restoreImage(targetImage, originalSrc) {
+    var targetImg = document.getElementById(targetImage);
+    targetImg.src = originalSrc;
+}
+</script>
+</head>
+	
+<body>
+	<div id = "wrapper">
+		<div id = "images">
+			<div id = "banner">
+				
+				<div class="boxart" onmouseover="changeImage('buttonA', 'images/buttonA_over.gif')" onmouseout="restoreImage('buttonA', 'images/buttonA.gif')">		
+					<img src="images/buttonA.gif" alt="Button A" id = "buttonA"></div>
+				<div class="boxart" onmouseover="changeImage('www', 'images/www_over.gif')" onmouseout="restoreImage('www', 'images/www.gif')">
+					<img src = "images/buttonB.gif" alt = "Button B" id = "buttonB"></div>
+				<div class="boxart" onmouseover="changeImage('web', 'images/web_over.jpg')" onmouseout="restoreImage('web', 'images/web.jpg')">
+					<img src = "images/buttonC.jpg" alt = "Button C" id = "buttonC"></div>
+				<div class="boxart" onmouseover="changeImage('world', 'images/world_over.jpg')" onmouseout="restoreImage('world', 'images/world.jpg')">
+					<img src = "images/buttonD.gif" alt = "Button D" id = "buttonD"></div>
+				<div onmouseover="changeImage('world', 'images/surprise1.jpg')" onmouseout="restoreImage('world', 'images/world.jpg')">
+					<img src = "images/web.jpg" alt = "Spiderweb" id = "web"></div>
+			</div>
+				<div>
+					<img src = "images/world.jpg" alt = "Planet Earth" id = "world"></div>
+		</div>
+				<div onmouseover="changeImage('buttonC', 'images/surprise2.jpg')" onmouseout="restoreImage('buttonC', 'images/buttonC.jpg')">
+					<img src = "images/www.gif" alt = "WorldWideWeb" id = "www"></div>
+		
+
+	</div>
+</body>
+</html>
