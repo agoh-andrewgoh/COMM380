@@ -1,45 +1,158 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>AndrewGohHome.html</title>
-    <style>
-        body {
-            background-color: #26A4D1;
-			font-family: Arial, sans-serif;
-       }
-		div {
-			text-align: center;
-		}
-		img {
-			margin-bottom: 10px;
-		}
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 30px;
-        }
-    </style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	body {
+		font-family: "Metrophobic Regular";
+		margin: 0;
+		overflow-y:scroll;		
+	}
+	@font-face {
+    	font-family: 'Metrophobic Regular';
+    	src: url('fonts/Metrophobic-Regular.ttf') format('truetype');
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: 100vh;
+	}
+	.maintext {
+		margin: 1%;
+		margin-bottom: 0.5%;
+	}
+	.underline {
+		width: 38.5%; 
+		height: 1vw;
+		margin-left: 40.5%;
+		background-color: #333;
+	}
+	.navigation {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		justify-content: space-between;
+		margin-left: 62%;
+		margin-right: 1%;
+		margin-bottom: auto;
+		color: #333333;
+	}
+	.navigation p {
+		font-size: 2vw;
+		color: #333333;
+		font-weight: normal;
+		text-decoration: none;
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+	.logo img{
+		width: 7vw;
+		height: 7vw;
+		position: absolute;
+    	top: 0;
+    	left: 0.1%;
+    	margin-top: 0.1%;
+	}
+	/* Below affects homepage text */	
+	h1 {
+		font-size: 10vw;
+		margin: 0;
+		color: #F47621;
+		font-weight: bold;
+	}
+	h2 {
+		font-size: 2.5vw;
+		margin: 0;
+		margin-left: 55%;
+		color: #478ECC;
+		font-weight: normal;
+	}
+	/* Below affects the dropdown menu for Projects */	
+	.dropbutton {
+		font-family: "Metrophobic Regular";
+	    background-color: #FFFFFF;
+	    color: white;
+		font-size: 2vw;
+		color: #478ECC;
+		font-weight: normal;
+	    border: none;
+	}
+	.dropbutton:hover {
+		color: #F47621;
+	}
+	.dropdown-content {
+ 		display: none;
+  		position: absolute;
+  		background-color: #FFFFFF;
+		font-size: 1vw;
+  		z-index: 1vw;
+	}
+	.dropdown-content a {
+ 		color: #333333;
+		background-color: white;
+  		padding: 0.5vw 1vw;
+  		text-decoration: none;
+  		display: block;
+		margin-left: -0.9vw;
+}
+	.dropdown-content a:hover {color: #F47621;}
+	
+	.dropdown:hover .dropdown-content {display: block;}
+	
+	.dropdown:hover .dropbtn {background-color: #FFFFFF;}
+	/* Below affects Links */	
+	#a1 {
+		font-size: 2vw;
+		color: #F47621;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	#a1:hover{
+		color: #478ECC;
+	}
+	.a2 {
+		font-size: 2vw;
+		color: #478ECC;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	.a2:hover {
+		color: #F47621;
+	}
+</style>
 </head>
 <body>
-    <div>
-        <img src="images/PlaceHolderImage.png" alt="Picture of Grumpy Cat fused with my qualities from my head">
-        <br>
-        <a href="project1/Project1HTML.html">Project 1 | Self-Portrait</a>  
-        <br>
-        <br>
-        <a href="inclass/Muybridge.html">Muybridge Animation</a>
-        <br>
-		<br>
-        <a href="inclass/AndrewGoh_Unified/Unified.html">Unified Letters</a>
-		<br>
-		<br>
-        <a href="project2/Project2.html">Project 2 | Alphabet</a>
-		<br>
-		<br>
-        <a href="inclass/Week7/Week7.html" target = "_blank">Week 7: Swap Image Behaviors</a>
-		<br>
-		<br>
-		<a href="inclass/Week8/week8.html" target="_blank" onclick="window.open('inclass/Week8/week8.html', '_blank', 'width=900,height=625'); return false;">Week 8: Divs and Behaviors</a>    </div>
+    <div class="container">
+		<div class="navigation">
+			<a id = "a1" href = "test.html">Home</a>
+			<p>-</p>
+			<div class = "dropdown">
+				<div class = "dropbutton">Projects</div>
+				<div class = "dropdown-content">
+					<a href = "project1/Project1HTML.html">Project 1</a>
+					<a href = "project2/Project2.html">Project 2</a>
+					<a href = "inclass/Muybridge.html">GIF Animation</a>
+					<a href = "inclass/Week7/Week7.html">Swap Image Behaviors</a>
+					<a href = "inclass/Week8/week8.html">More Divs and Behaviors</a>
+				</div>
+			</div>
+			<p>-</p>
+			<a class = "a2" href = "text.html">About me</a>
+			<p>-</p>
+			<a class = "a2" href = "text.html">Contact</a>
+		</div>
+		<div class="maintext">
+			<h1>Andrew Goh</h1>
+			<div class="underline"></div>
+			<h2>Powerful. Simplicity.</h2>
+        </div>
+    </div>
+	<div class = "logo">
+		<img src = "images/AndrewGohLogo.png" alt = "Logo of Andrew Goh">
+	</div>
 </body>
 </html>
+
