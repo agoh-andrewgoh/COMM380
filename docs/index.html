@@ -23,10 +23,10 @@
 		margin: 1%;
 		margin-bottom: 0.5%;
 	}
-	#underline {
-		width: 38.5%; 
+	.headline-underline {
+		width: 37.6%; 
 		height: 1vw;
-		margin-left: 40.3%;
+		margin-left: 40%;
 		margin-top: -1%;
 		background-color: #333;
 	}
@@ -49,12 +49,13 @@
 		display: flex;
 		align-items: center;
 	}
-	#navigateline{
-		width: 36.7%; 
-		height: 0.05vw;
-		margin-left: 62.2%;
-		margin-top: -48%;
+	.navigationline {
+		width: 498%;
+		height: 3%;
 		background-color: #333;
+		margin-top: 1%;
+		margin-left: -108%;
+		z-index: 2;
 	}
 	.logo img{
 		width: 7vw;
@@ -83,7 +84,7 @@
 		margin-left: -0.8%;
 		color: #478ECC;
 		font-weight: normal;
-		display: inline
+		display: inline;
 	}
 	/* Below affects the dropdown menu for Projects */	
 	.dropbutton {
@@ -100,13 +101,11 @@
 	.dropdown-content {
  		display: none;
   		position: absolute;
-  		background-color: #FFFFFF;
 		font-size: 1vw;
-  		z-index: 1vw;
+  		z-index: 1;
 	}
 	.dropdown-content a {
  		color: #333333;
-		background-color: white;
   		padding: 0.5vw 1vw;
   		text-decoration: none;
   		display: block;
@@ -116,7 +115,6 @@
 	
 	.dropdown:hover .dropdown-content {display: block;}
 	
-	.dropdown:hover .dropbtn {background-color: #FFFFFF;}
 	/* Below affects Links */	
 	#a1 {
 		font-size: 2vw;
@@ -149,9 +147,11 @@
 					<a href = "project1/Project1HTML.html">Project 1</a>
 					<a href = "project2/Project2.html">Project 2</a>
 					<a href = "inclass/Muybridge.html">GIF Animation</a>
+					<a href = "inclass/AndrewGoh_Unified/Unified.html">Unified Letters</a>
 					<a href = "inclass/Week7/Week7.html" target = "_blank">Swap Image Behaviors</a>
 					<a href = "inclass/Week8/week8.html" target="_blank" onclick="window.open('inclass/Week8/week8.html', '_blank', 'width=900,height=625'); return false;">More Divs and Behaviors</a>
 				</div>
+			<div class ="navigationline"></div>
 			</div>
 			<p>-</p>
 			<a class = "a2" href = "index.html">About me</a>
@@ -161,14 +161,13 @@
 		<div class="maintext">
 			<h1>Andrew Goh</h1>
 			<h3>COMM 380: Portfolio</h3>
-			<div id="underline"></div>
+			<div class ="headline-underline"></div>
 			<h2>powerful. simple. this is my design.</h2>
         </div>
     </div>
 	<div class = "logo">
 		<img src = "images/AndrewGohLogo.png" alt = "Logo of Andrew Goh">
 	</div>
-	<div id="navigateline"></div>
 </body>
 </html>
 
