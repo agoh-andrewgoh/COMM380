@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Andrew Goh</title>
+<title>Project 4</title>
 <style>
 	body {
 		font-family: "Metrophobic Regular";
@@ -13,23 +13,105 @@
     	font-family: 'Metrophobic Regular';
     	src: url('fonts/Metrophobic-Regular.ttf') format('truetype');
 	}
-	.container {
+	container {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		min-height: 100vh;
+		height: auto;
 	}
 	.maintext { 
+		top: 0;
 		margin: 1%;
 		margin-bottom: 0.5%;
 	}
-	.maintext-underline {
-		width: 37.6%; 
-		height: 1vw;
-		margin-left: 41%;
-		margin-top: -1%;
-		background-color: #333;
+	h1 {
+		font-size: 8vw;
+		color: #F47621;
+		font-weight: bold;
+		margin-left: 10%;
+		margin-top: -54%;
 	}
+	/* Below affects the four bars */	
+	#boxcontainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: 3.8vh;
+		margin-top: 8%;
+	}
+	#box1 {
+    	width: 20%;
+		height: 2%;
+       	background-color: #F47621;
+		padding-bottom: 7.5%;
+		margin-bottom: 2.5%;
+		position: relative;
+	}
+	#box2 {
+    	width: 40%;
+		height: 2%;
+       	background-color: #478ECC;
+		padding-bottom: 7.5%;
+		margin-bottom: 2.5%;
+		position: relative;
+	}
+	#box3 {
+    	width: 60%;
+		height: 2%;
+       	background-color: #333;
+		padding-bottom: 7.5%;
+		margin-bottom: 2.5%;
+		position: relative;
+	}
+	#box4 {
+    	width: 80%;
+		height: 2%;
+       	background-color: #F47621;
+		padding-bottom: 7.5%;
+		margin-bottom: 2.5%;
+		position: relative;
+	}
+	#quote-img1,
+	#quote-img2,
+	#quote-img3,
+	#quote-img4 {
+		filter: brightness(50%);
+	}
+	#quote-img1:hover,
+	#quote-img2:hover,
+	#quote-img3:hover,
+	#quote-img4:hover {
+		filter: brightness(100%);
+	}
+    #quote-img1 {
+		position: absolute;
+		top: -8.5%;
+        left: 45%;
+		width: 50%;
+		height: 100%;
+    }
+    #quote-img2 {
+		position: absolute;
+		top: -8.5%;
+        left: 72.3%;
+		width: 25%;
+		height: 100%;
+    }
+    #quote-img3 {
+		position: absolute;
+		top: -8.5%;
+        left: 81.5%;
+		width: 16.7%;
+		height: 100%;
+    }
+    #quote-img4 {
+		position: absolute;
+		top: -8.5%;
+        left: 86.2%;
+		width: 12.5%;
+		height: 100%;
+    }
+	/* Below affects navigation menu */	
 	.navigation {
 		display: flex;
 		flex-direction: row;
@@ -64,27 +146,6 @@
     	top: 0;
     	left: 0.1%;
     	margin-top: 0.1%;
-	}
-	/* Below affects homepage text */	
-	h1 {
-		font-size: 10vw;
-		color: #F47621;
-		font-weight: bold;
-		display: inline;
-	}
-	h2 {
-		font-size: 2.5vw;
-		margin: 0;
-		margin-left: 55%;
-		color: #478ECC;
-		font-weight: normal;
-	}
-	h3 {
-		font-size: 2vw;
-		margin-left: -0.8%;
-		color: #478ECC;
-		font-weight: normal;
-		display: inline;
 	}
 	/* Below affects the dropdown menu for Projects */	
 	.dropbutton {
@@ -139,10 +200,10 @@
 <body>
     <div class="container">
 		<div class="navigation">
-			<a id = "a1" href = "index.html">Home</a>
+			<a class = "a2" href = "index.html">Home</a>
 			<p>-</p>
 			<div class = "dropdown">
-				<div class = "dropbutton">Projects</div>
+				<div class = "dropbutton"><a id ="a1" href = "#">Projects</a></div>
 				<div class = "dropdown-content">
 					<a href = "project1/Project1HTML.html">Project 1</a>
 					<a href = "project2/Project2.html">Project 2</a>
@@ -159,16 +220,26 @@
 			<p>-</p>
 			<a class = "a2" href = "index.html">Contact</a>
 		</div>
-		<div class="maintext">
-			<h1>Andrew Goh</h1>
-			<h3>COMM 380: Portfolio</h3>
-			<div class ="maintext-underline"></div>
-			<h2>powerful. simple. this is my design.</h2>
-        </div>
     </div>
+		<div id = "boxcontainer">
+			<div id ="box1">
+        		<a href = ""><img id ="quote-img1" src="images/Quote1.png" alt="Quote Image 1"></a>
+			</div>
+			<div id ="box2">
+        		<a href = ""><img id ="quote-img2" src="images/Quote2.png" alt="Quote Image 2"></a>
+			</div>
+			<div id ="box3">
+        		<a href = ""><img id ="quote-img3" src="images/Quote3.png" alt="Quote Image 3"></a>
+			</div>
+			<div id ="box4">
+        		<a href = ""><img id ="quote-img4" src="images/Quote4.png" alt="Quote Image 4"></a>
+			</div>
+        </div>
+	<div class="maintext">
+			<h1>Project 4</h1>
+        </div>
 	<div class = "logo">
-		<img src = "images/AndrewGohLogo.png" alt = "Logo of Andrew Goh">
+		<img src = "images/AndrewGohLogo.png" alt = "Logo of Andrew Goh" >
 	</div>
 </body>
 </html>
-
