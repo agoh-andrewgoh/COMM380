@@ -2,80 +2,227 @@
 <html>
 <head>
 <meta charset="utf-8" >
-<title>Unified Webpage</title>
+<title>Unified Letters</title>
 <style>
 	body { 
-		font-family: Arial, sans-serif;
-		background-color: #1D1D1D;
-		overflow: auto;
-		margin-top: 50px;
+		font-family: "Metrophobic Regular";
+		overflow-y: hidden;
 	}
+	@font-face {
+    	font-family: 'Metrophobic Regular';
+    	src: url('fonts/Metrophobic-Regular.ttf') format('truetype');
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: 100vh;
+	}
+	.navigation {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		justify-content: space-between;
+		margin-left: 62%;
+		margin-right: 1%;
+		margin-bottom: auto;
+		color: #333333;
+	}
+	.navigation p {
+		font-size: 2vw;
+		color: #333333;
+		font-weight: normal;
+		text-decoration: none;
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+	.navigationline {
+		width: 499%;
+		height: 3%;
+		background-color: #333;
+		margin-top: 2.5%;
+		margin-left: -108%;
+		z-index: 2;
+	}
+	.logo img{
+		width: 7vw;
+		height: 7vw;
+		position: absolute;
+    	top: 0;
+    	left: 0.1%;
+    	margin-top: 0.1%;
+	}
+	.header-container {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 0;
+    	left: 0.1%;
+    	margin-top: 0.1%;
+		z-index: 2;
+	}
+	.maintext {
+		margin-top: -2%;
+	}
+	h1 {
+		font-size: 7vw;
+		margin-left: 45%;
+		color: #F47621;
+		font-weight: bold;
+		display: inline;
+	}
+	/* Below affects the dropdown menu for Projects */	
+	.dropbutton {
+		font-family: "Metrophobic Regular";
+	    color: white;
+		font-size: 2vw;
+		color: #478ECC;
+		font-weight: normal;
+	    border: none;
+	}
+	.dropbutton:hover {
+		color: #F47621;
+	}
+	.dropdown-content {
+ 		display: none;
+  		position: absolute;
+		font-size: 1vw;
+  		z-index: 1;
+	}
+	.dropdown-content a {
+ 		color: #333333;
+  		padding: 0.5vw 1vw;
+  		text-decoration: none;
+  		display: block;
+		margin-left: -0.9vw;
+}
+	.dropdown-content a:hover {color: #F47621;}
+	
+	.dropdown:hover .dropdown-content {display: block;}
+	
+	/* Below affects Links */	
+	#a1 {
+		font-size: 2vw;
+		color: #F47621;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	#a1:hover{
+		color: #478ECC;
+	}
+	.a2 {
+		font-size: 2vw;
+		color: #478ECC;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	.a2:hover {
+		color: #F47621;
+	}
+	
 	.grid-container {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
 		gap: 20px;
-		width: 640px;
+		width: 90%;
 		margin: 0 auto;
+		margin-top: -12%;
 	}
 	.gridimages img {
-		max-width: 200px;
-		max-height: 200px;
+		width: 100%;
+		height: 100%;
 		filter: brightness(30%);
 	}
 	.gridimages img:hover {
-		animation: rainbowFlash 0.5s infinite alternate;
+		filter: brightness(100%);	
 	}
 	@keyframes rainbowFlash {
 		0% { filter: hue-rotate(0deg); }
 		100% { filter: hue-rotate(360deg); }
 	} 
-	h1 {
-		color: white;
-		text-align: center;
-		font-weight: 1;
-		font-size: 50px;
-		width: 640x;
-		magin: 0 auto;
+	.centered-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
-	a {
-		text-decoration: none;
-	}
-</style>	
+</style>
+<script>
+function changeImage(targetImage, newSrc) {
+    var targetImg = document.getElementById(targetImage);
+    targetImg.src = newSrc;
+}
+
+function restoreImage(targetImage, originalSrc) {
+    var targetImg = document.getElementById(targetImage);
+    targetImg.src = originalSrc;
+}
+</script>
 </head>
 <body>
 <div>
+    <div class="container">
+		<div class="navigation">
+			<a class = "a2" href = "../index.html">Home</a>
+			<p>-</p>
+			<div class = "dropdown">
+				<div class = "dropbutton"><a id ="a1" href = "#">Projects</a></div>
+				<div class = "dropdown-content">
+					<a href = "../../project1/Project1HTML.html">Project 1</a>
+					<a href = "../../project2/Project2.html">Project 2</a>
+					<a href = "../Muybridge.html">GIF Animation</a>
+					<a href = "Unified.html">Unified</a>
+					<a href = "../Week8/week8.html" target="_blank" onclick="window.open('../Week8/week8.html', '_blank', 'width=900,height=625'); return false;">More Divs and Behaviors</a>
+					<a href = "../../project4/Project4.html">Project 4</a>
+				</div>
+			<div class ="navigationline"></div>
+			</div>
+			<p>-</p>
+			<a class = "a2" href = "../index.html">About me</a>
+			<p>-</p>
+			<a class = "a2" href = "../index.html">Contact</a>
+		</div>
+    </div>
 	<div class="grid-container">
 		<div class="gridimages">
-			<a href="LetterA.html"><img src="images/A500.jpg" alt="A"></a>
+			<div onmouseover="changeImage('square', 'images/unraveling.png')"><img src="images/one.jpg" alt="The Unraveling"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterB.html"><img src="images/B500.jpg" alt="B"></a>
+			<div onmouseover="changeImage('square', 'images/revolutions.png')"><img src="images/two.jpg" alt="Revolutions per Minute"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterF.html"><img src="images/F500.jpg" alt="F"></a>
+			<div onmouseover="changeImage('square', 'images/sirensong.png')"><img src="images/three.jpg" alt="Siren Song of the Counter Culture"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterG.html"><img src="images/G500.jpg" alt="G"></a>
+			<div onmouseover="changeImage('square', 'images/sufferer.png')"><img src="images/four.jpg" alt="The Sufferer & the Witness"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterJ.html"><img src="images/J500.jpg" alt="J"></a>
+			<div onmouseover="changeImage('square', 'images/appealtoreason.png')"><img src="images/five.jpg" alt="Appeal to Reason"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterM.html"><img src="images/M500.jpg" alt="M"></a>
+			<div onmouseover="changeImage('square', 'images/endgame.png')"><img src="images/six.jpg" alt="Endgame"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterQ.html"><img src="images/Q500.jpg" alt="Q"></a>
+			<div onmouseover="changeImage('square', 'images/blackmarket.png')"><img src="images/seven.jpg" alt="The Black Market"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterW.html"><img src="images/W500.jpg" alt="W"></a>
+			<div onmouseover="changeImage('square', 'images/wolves.png')"><img src="images/eight.jpg" alt="Wolves"></div>
 		</div>
 		<div class="gridimages">
-			<a href="LetterZ.html"><img src="images/Z500.jpg" alt="Z"></a>
+			<div onmouseover="changeImage('square', 'images/nowhere.png')"><img src="images/nine.jpg" alt="Nowhere Generation"></div>
 		</div>
 	</div>
-	<div class="text">
-		<a href="../../index.html"><h1>Return Home</h1></a>
-	</div>	
+    <div class="centered-image">
+        <img src="images/square.gif" alt="Centered Image" id = "square">
+    </div>	
+	<div class="header-container">
+		<div class="maintext">
+			<h1>Unified</h1>
+		</div>
+		<div class="logo">
+			<img src="images/AndrewGohLogo.png" alt="Logo of Andrew Goh">
+		</div>
+	</div>
 </div>
 </body>
 </html>
