@@ -2,28 +2,196 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Muybridge</title>
+<title>Muybridge GIF</title>
 </head>
-    <style>
-        body {
-            background-color: #000000;
-			font-family: Comic Sans MS, sans-serif;
-       }
-		div {
-			text-align: center;
-		}
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 45px;
-        }
-    </style>
+<style>
+	body { 
+		font-family: "Metrophobic Regular";
+		overflow-y: hidden;
+	}
+	@font-face {
+    	font-family: 'Metrophobic Regular';
+    	src: url('fonts/Metrophobic-Regular.ttf') format('truetype');
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: 100vh;
+	}
+	.navigation {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		justify-content: space-between;
+		margin-left: 62%;
+		margin-right: 1%;
+		margin-bottom: auto;
+		color: #333333;
+	}
+	.navigation p {
+		font-size: 2vw;
+		color: #333333;
+		font-weight: normal;
+		text-decoration: none;
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+	.navigationline {
+		width: 499%;
+		height: 3%;
+		background-color: #333;
+		margin-top: 2.5%;
+		margin-left: -108%;
+		z-index: 2;
+	}
+	.logo img{
+		width: 7vw;
+		height: 7vw;
+		position: absolute;
+    	top: 0;
+    	left: 0.1%;
+    	margin-top: 0.1%;
+	}
+	.header-container {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 0;
+    	left: 0.1%;
+    	margin-top: 0.1%;
+		z-index: 2;
+	}
+	.maintext {
+		margin-top: -2%;
+	}
+	h1 {
+		font-size: 7vw;
+		margin-left: 45%;
+		color: #F47621;
+		font-weight: bold;
+		display: inline;
+	}
+	/* Below affects the dropdown menu for Projects */	
+	.dropbutton {
+		font-family: "Metrophobic Regular";
+	    color: white;
+		font-size: 2vw;
+		color: #478ECC;
+		font-weight: normal;
+	    border: none;
+	}
+	.dropbutton:hover {
+		color: #F47621;
+	}
+	.dropdown-content {
+ 		display: none;
+  		position: absolute;
+		font-size: 1vw;
+  		z-index: 1;
+	}
+	.dropdown-content a {
+ 		color: #333333;
+  		padding: 0.5vw 1vw;
+  		text-decoration: none;
+  		display: block;
+		margin-left: -0.9vw;
+}
+	.dropdown-content a:hover {color: #F47621;}
+	
+	.dropdown:hover .dropdown-content {display: block;}
+	
+	/* Below affects Links */	
+	#a1 {
+		font-size: 2vw;
+		color: #F47621;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	#a1:hover{
+		color: #478ECC;
+	}
+	.a2 {
+		font-size: 2vw;
+		color: #478ECC;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	.a2:hover {
+		color: #F47621;
+	}
+	
+	.grid-container {
+		display: flex;
+		gap: 20px;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: -12%;
+	}
+	.gridimages img {
+		width: 100%;
+		height: 100%;
+		filter: brightness(30%);
+	}
+	.gridimages img:hover {
+		filter: brightness(100%);	
+	}
+	@keyframes rainbowFlash {
+		0% { filter: hue-rotate(0deg); }
+		100% { filter: hue-rotate(360deg); }
+	} 
+	.centered-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+</style>
+<script>
+function changeImage(targetImage, newSrc) {
+    var targetImg = document.getElementById(targetImage);
+    targetImg.src = newSrc;
+}
+
+function restoreImage(targetImage, originalSrc) {
+    var targetImg = document.getElementById(targetImage);
+    targetImg.src = originalSrc;
+}
+</script>
+</head>
 <body>
+    <div class="container">
+		<div class="navigation">
+			<a class = "a2" href = "../index.html">Home</a>
+			<p>-</p>
+			<div class = "dropdown">
+				<div class = "dropbutton"><a id ="a1" href = "#">Projects</a></div>
+				<div class = "dropdown-content">
+					<a href = "../project1/Project1HTML.html">Project 1</a>
+					<a href = "../project2/Project2.html">Project 2</a>
+					<a href = "../inclass/Muybridge.html">Muybridge GIF</a>
+					<a href = "../inclass/AndrewGoh_Unified/Unified.html">Unified</a>
+					<a href = "../inclass/Week8/week8.html" target="_blank" onclick="window.open('../inclass/Week8/week8.html', '_blank', 'width=900,height=625'); return false;">More Divs and Behaviors</a>
+					<a href = "Project4.html">Project 4</a>
+				</div>
+			<div class ="navigationline"></div>
+			</div>
+			<p>-</p>
+			<a class = "a2" href = "../index.html">About me</a>
+			<p>-</p>
+			<a class = "a2" href = "../index.html">Contact</a>
+		</div>
+    </div>
 <div>
-	<a href ="../index.html"><img src ="images/AndrewGohHorseKart.gif"></a>
-	<br>
-	<br>
-	<a href="../index.html">1 2 3 Go! Click Back!</a>	
+	<div class="header-container">
+		<div class="maintext">
+			<h1>Muybridge</h1>
+		</div>
+		<div class="logo">
+			<img src="images/AndrewGohLogo.png" alt="Logo of Andrew Goh">
+		</div>
+	</div>
 </div>
 </body>
 </html>
